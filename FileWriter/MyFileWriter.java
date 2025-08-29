@@ -20,6 +20,8 @@ public class MyFileWriter {
             e.printStackTrace();
         }
 
+        idk1234567890;
+
         // 2. Using BufferedWriter
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName2))) {
             bufferedWriter.write(data);
