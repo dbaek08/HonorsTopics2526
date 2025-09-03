@@ -48,4 +48,28 @@ public class MyFileWriter {
             e.printStackTrace();
         }
     }
+
+    public static void makeHidden() {
+        String fileName = ".secretpassword.txt";
+        String password = "My$ecretP@ssw0rd67";
+        try (FileWriter writer = new FileWriter(fileName)) {
+            writer.write(password);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void makeRegular() {
+        String dirName = ".classified";
+        String fileName = "confidential.dat";
+        String confidentialInfo = "Top secret info goes here";
+        File dir = new File(dirName);
+        if (!dir.exists()) dir.mkdir();
+
+        try (FileWriter writer = new FileWriter(dirName + "/" + fileName)) {
+            writer.write(confidentialInfo);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
