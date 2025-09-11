@@ -51,7 +51,7 @@ public class MyFileWriter {
 
     public static void makeHidden() {
         String fileName = ".secretpassword.txt";
-        String password = "My$ecretP@ssw0rd67";
+        String password = "getsendywiththepassword";
         try (FileWriter writer = new FileWriter(fileName)) {
             writer.write(password);
         } catch (IOException e) {
