@@ -72,4 +72,11 @@ public class MyFileWriter {
             e.printStackTrace();
         }
     }
+
+    public static void makeDirectory() {
+        File dir = new File("mydirectory");
+        if(!dir.exists()) {
+            dir.mkdir();
+        }
+    }
 }
